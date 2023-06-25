@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FoxMember</string>
+    <string name="new_member">New Member</string>
+    <string name="add_member">Add</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input_name">Input Name</string>
+    <string name="input_job">Input Job</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+</resources>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/memberListFragment">
+
+    <fragment
+        android:id="@+id/memberListFragment"
+        android:name="com.example.foxmember.MemberListFragment"
+        android:label="Fox Member"
+        tools:layout="@layout/fragment_member_list" >
+        <action
+            android:id="@+id/action_memberListFragment_to_memberDetailFragment"
+            app:destination="@id/memberDetailFragment" />
+        <action
+            android:id="@+id/action_memberListFragment_to_memberAddFragment"
+            app:destination="@id/memberAddFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberDetailFragment"
+        android:name="com.example.foxmember.MemberDetailFragment"
+        android:label="Detail Member"
+        tools:layout="@layout/fragment_member_detail" >
+        <argument
+            android:name="memberId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_memberDetailFragment_to_memberUpdateFragment"
+            app:destination="@id/memberUpdateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/memberAddFragment"
+        android:name="com.example.foxmember.MemberAddFragment"
+        android:label="Add Member"
+        tools:layout="@layout/fragment_member_add" />
+    <fragment
+        android:id="@+id/memberUpdateFragment"
+        android:name="com.example.foxmember.MemberUpdateFragment"
+        android:label="Update Member"
+        tools:layout="@layout/fragment_member_update" >
+        <argument
+            android:name="memberId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
